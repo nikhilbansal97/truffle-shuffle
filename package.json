@@ -1,5 +1,17 @@
 {
   "devDependencies": {
-    "auto": "^7.8.0"
+    "auto": "^7.9.2"
+  },
+  "scripts": {
+    "version": "npm version `auto version` -m 'Bump version to %s [skip ci]'",
+    "publish": "npm publish && git push --follow-tags --set-upstream origin $branch",
+    "release": "auto changelog && npm run version && npm run publish && auto release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nikhilbansal97/truffle-shuffle.git"
+  },
+  "dependencies": {
+    "dotenv": "^8.2.0"
   }
 }
