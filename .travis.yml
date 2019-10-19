@@ -14,3 +14,10 @@ android:
     - extra-google-google_play_services
     - extra-google-m2repository
     - extra-android-m2repository
+jobs:
+  include:
+    - stage: Build
+      script: ./gradlew clean assembleDebug
+    - stage: GitHub Release
+      if: branch = master
+      script: npm run release
