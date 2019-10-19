@@ -18,7 +18,7 @@ android:
 jobs:
   include:
     - stage: Build
-      script: ./gradlew build connectedCheck
+      script: "export PATH=/usr/local/android-sdk/tools/bin:$PATH && ./gradlew build connectedCheck"
     - stage: GitHub Release
       if: branch = master
       script: npm run release
