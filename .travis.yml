@@ -1,4 +1,6 @@
+dist: trusty
 language: android
+
 android:
   components:
     - tools
@@ -17,7 +19,8 @@ android:
 jobs:
   include:
     - stage: Build
-      script: ./gradlew clean assembleDebug
+      script: "./gradlew build connectedCheck"
     - stage: GitHub Release
+      language: node_js
       if: branch = master
       script: npm run release
