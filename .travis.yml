@@ -1,5 +1,5 @@
-language: android
 dist: trusty
+language: android
 
 android:
   components:
@@ -17,11 +17,10 @@ android:
     - extra-google-m2repository
     - extra-android-m2repository
 
-language: node_js
 jobs:
   include:
     - stage: Build
-      script: "export PATH=/usr/local/android-sdk/tools/bin:$PATH && ./gradlew build connectedCheck"
+      script: "./gradlew build connectedCheck"
     - stage: GitHub Release
       if: branch = master
       script: npm run release
