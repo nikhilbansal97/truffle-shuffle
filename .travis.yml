@@ -16,11 +16,11 @@ android:
     - extra-google-google_play_services
     - extra-google-m2repository
     - extra-android-m2repository
-
 jobs:
   include:
     - stage: Build
       script: "./gradlew build connectedCheck"
     - stage: GitHub Release
+      language: node_js
       if: branch = master
       script: npm run release
