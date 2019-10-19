@@ -67,7 +67,7 @@ ext {
     siteUrl = 'https://github.com/intuit/truffle-shuffle'
     gitUrl = 'https://github.com/intuit/truffle-shuffle.git'
 
-    libraryVersion = '0.0.2'
+    libraryVersion = '0.0.3'
 
     developerId = 'katielevy1'
     developerName = 'Katie Levy'
