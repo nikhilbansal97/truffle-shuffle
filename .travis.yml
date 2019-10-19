@@ -1,5 +1,6 @@
 language: android
-language: node_js
+dist: trusty
+
 android:
   components:
     - tools
@@ -15,6 +16,8 @@ android:
     - extra-google-google_play_services
     - extra-google-m2repository
     - extra-android-m2repository
+
+language: node_js
 jobs:
   include:
     - stage: Build
