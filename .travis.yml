@@ -1,4 +1,5 @@
 language: android
+language: node_js
 android:
   components:
     - tools
